@@ -81,7 +81,10 @@ class Blockchain {
             }
 
             //calculate HASH
-            block.hash = SHA256( JSON.stringify(block).toString() );
+            block.hash = SHA256( JSON.stringify(block) ).toString();
+
+            //push block to chain
+            this.chain.push(block);
 
         });
     }
