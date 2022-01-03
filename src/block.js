@@ -55,11 +55,11 @@ class Block {
             // Comparing if the hashes changed
             let hashesAreEqual = (savedHash === recalculatedHash);
 
-            // Returning the Block is not valid
+            // Returning the Block is valid
             if (hashesAreEqual){
                 resolve(true);
             }            
-            // Returning the Block is valid
+            // Returning the Block is not valid
             else{
                 resolve(false);
             }
